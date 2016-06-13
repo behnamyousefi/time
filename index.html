@@ -1,0 +1,14 @@
+<script>
+TIME = new Date();
+DIFF = new Date() - TIME ;
+INTV = window.setInterval("Show_Clock()",1000) ;
+ 
+function Show_Clock(){
+     TIME = new Date(new Date() - DIFF) ;
+     HH = TIME.getHours() ;
+     MM = TIME.getMinutes() ;
+     SS = TIME.getSeconds() ;
+     document.getElementById('CLOCK').innerHTML=((HH<10  )? "0"+HH:HH) + ":" + ((MM<10)? "0"+MM:MM) + ":" + ((SS<10)? "0"+SS:SS);
+}
+</script>
+<span id="CLOCK" ></span>
